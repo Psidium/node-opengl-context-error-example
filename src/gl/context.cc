@@ -24,7 +24,7 @@ void Context::Init(Napi::Env env, Napi::Object exports) {
 }
 
 Napi::Value Context::createContext(const Napi::CallbackInfo& info) {
-    std::string printIdentifier = info[0].ToString();
+    std::string printIdentifier = ""; // Use this to debug
 
     CGLContextObj context;
     CGLPixelFormatAttribute attributes[2] = {
